@@ -10,12 +10,12 @@ ran=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1)
 
 if [[ -n $RCLONE_CONFIG_URL ]]; then
   echo "Rclone config detected 📁📁"
-  wget -q $RCLONE_CONFIG_URL -O clone.conf
+  wget -q $RCLONE_CONFIG_URL -O app/clone.conf
 fi
 
 if [[ -n $CONFIG_ENV_URL ]]; then
   echo " Found config.env File 📁📁 "
-	wget -q $CONFIG_ENV_URL -O config.env
+	wget -q $CONFIG_ENV_URL -O app/config.env
 fi
 
 
